@@ -2,11 +2,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import TrustedBrands from "./TrustedBrands";
 
 export default function LampDemo() {
   return (
     <>
       <Navbar />
+      <br />
       <LampContainer>
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
@@ -16,16 +18,27 @@ export default function LampDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-24 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-7xl"
+          className=" bg-gradient-to-br mt-72 md:text-center from-slate-300 to-white bg-clip-text text-center text-5xl font-bold tracking-tight text-transparent md:text-7xl m-[-100px]"
         >
-          Optimize your business <br /> growth with vetted developers.
-          <p className="text-xl">
-            <br />
-            With unlimited design projects and 100+ design services, we&apos;ve
-            got your back.
-          </p>
+          <strong>TechGen, <br /></strong><strong>new generation</strong> <br /> of{" "}
+          <strong>Tech Services</strong>
+          <br />
+          <div className="text-center pt-10">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+              With access to top-notch developers <br />
+              and over 10 specialized coding services, <br /> we&apos;ve got
+              your back.
+            </p>
+          </div>
+          <br />
+          <button className=" bg-white text-black text-xl py-2 px-32  rounded-xl hover:bg-slate-200 mt-6 md:px-6 md:py-4">
+            See our plans
+          </button>
         </motion.h1>
       </LampContainer>
+      <div className="mt-[-32] mt">
+        <TrustedBrands />
+      </div>
     </>
   );
 }
@@ -36,8 +49,8 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-transparent text-white flex justify-between items-center px-6 py-4 z-50 pt-2">
-      <NexGenLogo />
+    <nav className="fixed top-0 left-0 w-full bg-[#020C1E] text-white flex justify-between items-center px-6 py-4 pt-2 z-50 mb-5 pb-1">
+      <TechGenLogo />
       <div className="hidden md:flex items-center space-x-4">
         <a href="#why-nexgen" className="hover:underline">
           Why TechGen?
@@ -118,7 +131,7 @@ const Navbar = () => {
   );
 };
 
-const NexGenLogo = () => (
+const TechGenLogo = () => (
   <svg
     width="90"
     height="40"
@@ -128,10 +141,11 @@ const NexGenLogo = () => (
   >
     <text
       x="0"
-      y="20"
+      y="15"
       fill="#0EB2CE"
-      fontSize="25"
+      fontSize="18"
       fontFamily="Arial, sans-serif"
+      fontWeight="bold"
     >
       TechGen
     </text>
@@ -148,11 +162,11 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
+        "relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
         className
       )}
     >
-      <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 mt-20">
+      <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 mt-32">
         <motion.div
           initial={{ opacity: 0.5, width: "15rem" }}
           whileInView={{ opacity: 1, width: "30rem" }}
