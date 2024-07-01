@@ -38,34 +38,6 @@ const projects: Project[] = [
     description: "Designing intuitive and engaging web interfaces.",
     demo: "https://example.com/demo-web-ui-ux",
     github: "https://github.com/yourusername/web-ui-ux"
-  },
-  {
-    image: "/images/works/webflow.png",
-    title: "Book Store",
-    description: "Designing and developing with Webflow.",
-    demo: "https://example.com/demo-webflow",
-    github: "https://github.com/yourusername/webflow"
-  },
-  {
-    image: "/images/works/social-media.png",
-    title: "Currency Exchange",
-    description: "Creating engaging social media content.",
-    demo: "https://example.com/demo-social-media",
-    github: "https://github.com/yourusername/social-media"
-  },
-  {
-    image: "/images/works/webflow.png",
-    title: "SmartPocket",
-    description: "Designing and developing with Webflow.",
-    demo: "https://example.com/demo-webflow",
-    github: "https://github.com/yourusername/webflow"
-  },
-  {
-    image: "/images/works/social-media.png",
-    title: "School Library",
-    description: "Creating engaging social media content.",
-    demo: "https://example.com/demo-social-media",
-    github: "https://github.com/yourusername/social-media"
   }
 ];
 
