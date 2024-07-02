@@ -116,25 +116,25 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 text-center bg-[#F2DFD6]">
+    <div className="max-w-7xl mx-auto px-4 py-10 text-center bg-[#dfffea]">
       <h1 className="text-3xl font-extrabold mb-4 md:text-5xl">Pick a plan and Get started</h1>
       <p className="text-xl mb-10 md:text-2xl">One flat monthly fee. No contracts, no hidden fees</p>
-      <div className="flex justify-center space-x-1 mb-10 p-3 bg-slate-200 md:mx-40 rounded-2xl">
+      <div className="flex justify-center space-x-1 mb-10 p-2 bg-slate-200 md:mx-40 rounded-3xl lg:mx-96">
         <button
           onClick={() => handleCycleChange('monthly')}
-          className={`px-4 py-2 rounded-lg ${billingCycle === 'monthly' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-3xl ${billingCycle === 'monthly' ? 'bg-blue-400 text-white' : 'bg-gray-200'}`}
         >
           Monthly
         </button>
         <button
           onClick={() => handleCycleChange('quarterly')}
-          className={`px-4 py-2 rounded-lg ${billingCycle === 'quarterly' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-3xl ${billingCycle === 'quarterly' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
         >
           Quarterly (15% off)
         </button>
         <button
           onClick={() => handleCycleChange('yearly')}
-          className={`px-4 py-2 rounded-lg ${billingCycle === 'yearly' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`px-4 py-2 rounded-3xl ${billingCycle === 'yearly' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
         >
           Yearly (25% off)
         </button>
@@ -148,13 +148,13 @@ const Pricing: React.FC = () => {
               </div>
             )}
             <h2 className="text-2xl font-bold mb-4">{plan.name}</h2>
-            <p className="text-4xl font-extrabold mb-4">${plan.price[billingCycle]}</p>
+            <p className="text-4xl font-extrabold mb-1">${plan.price[billingCycle]}</p>
             <p className="text-xl mb-6">per month</p>
             <button className="bg-blue-500 text-white px-4 py-2 rounded-lg mb-6">Get started</button>
             <ul className="text-left">
               {plan.description.map((item, index) => (
                 <li key={index} className="mb-2">
-                 <FaCheckCircle className="inline-block mr-2 text-green-500" /> {item}
+                 <FaCheckCircle className="inline-block mr-1 text-green-500" /> {item}
                 </li>
               ))}
             </ul>

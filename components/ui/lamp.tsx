@@ -144,7 +144,7 @@ const TechGenLogo = () => (
       y="15"
       fill="#0EB2CE"
       fontSize="18"
-      fontFamily="Arial, sans-serif"
+      fontFamily="system-ui"
       fontWeight="bold"
     >
       TechGen
