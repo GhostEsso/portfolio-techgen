@@ -43,7 +43,7 @@ const projects: Project[] = [
 
 const Projects = (props: Props) => {
   return (
-    <div className="max-w-8xl mx-auto px-4 py-20 text-center bg-[#F0F0F0]">
+    <div id="our-work" className="max-w-8xl mx-auto px-4 py-20 text-center bg-[#F0F0F0]">
       <h1 className="text-3xl font-extrabold mb-4 md:text-6xl">5+ Development Services</h1>
       <h2 className="text-3xl font-bold mb-6 md:text-6xl">One Flat Fee</h2>
       <p className="mb-10 text-xl md:text-2xl">

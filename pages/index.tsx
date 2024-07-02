@@ -5,6 +5,9 @@ import DevApproach from "@/components/DevApproach";
 import Projects from "@/components/Projects";
 import Customers from "@/components/Customers";
 import Pricing from "@/components/Pricing";
+import WebflowDevelopment from "@/components/WebFlowDev";
+import CallToAction from "@/components/CallToAction";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +19,9 @@ export default function Home() {
     <Projects />
     <Customers />
     <Pricing />
+    <WebflowDevelopment />
+    <CallToAction />
+    <Footer />
     </>
   );
 }

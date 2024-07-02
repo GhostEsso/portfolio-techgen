@@ -25,12 +25,12 @@ const testimonials: Testimonial[] = [
     name: "Sarah Delonta",
     title: "Founder of Sa’r Delices",
     image: "/images/sarah_delonta.jpg"
-  }
+  },
 ];
 
 const Customers: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto py-10 text-center bg-[#d6c7bf]">
+    <div className="max-w-7xl mx-auto py-10 text-center bg-[#fae4dc]">
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-10 mx-10">
         Our customers can&apos;t imagine life without <strong>TechGen.</strong>
       </h1>
@@ -44,7 +44,7 @@ const Customers: React.FC = () => {
 };
 
 const TestimonialCard: React.FC<Testimonial> = ({ quote, name, title, image }) => (
-  <div className="bg-white p-6 text-left transition-transform duration-300 mx-5 shadow-md rounded-3xl">
+  <div className="bg-white p-6 text-left transition-transform duration-300 mx-3 shadow-md rounded-3xl">
     <img
       src={image}
       alt={name}
