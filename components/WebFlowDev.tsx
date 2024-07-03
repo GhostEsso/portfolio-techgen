@@ -1,6 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 const WebflowDevelopment = () => {
+  const [openQuestionIndex, setOpenQuestionIndex] = useState(null);
+
+  const toggleQuestion = (index: any) => {
+    setOpenQuestionIndex(openQuestionIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "What is Webflow Development?",
+      answer: "Webflow Development is a process of building websites using the Webflow platform, which allows for rapid creation and customization."
+    },
+    {
+      question: "How long does it take to build a Webflow site?",
+      answer: "Typically, it takes about 5 days to build a standard 5-page website on Webflow."
+    },
+    {
+      question: "Can I make changes to my site after it's built?",
+      answer: "Yes, with Webflow, you can easily make changes to your site even after it's built. It's a very flexible platform."
+    },
+    {
+      question: "Is there a money-back guarantee?",
+      answer: "Yes, we offer a 30-day money-back guarantee if you're not satisfied with the service."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8 px-4 sm:px-6 lg:px-5">
       <div className="max-w-3xl w-full space-y-6">
@@ -13,8 +38,8 @@ const WebflowDevelopment = () => {
             5 pages <span className="text-red-600">•</span> 5-day turnaround <span className="text-red-600">•</span> 100% yours
           </p>
           <p className="text-2xl font-bold">$799</p>
-          <p className="text-sm ">per website</p>
-          <button className="bg-cyan-500 text-white px-4 py-2 rounded mt-4 ">
+          <p className="text-sm">per website</p>
+          <button className="bg-cyan-500 text-white px-4 py-2 rounded mt-4">
             Get started
           </button>
         </div>
@@ -22,31 +47,22 @@ const WebflowDevelopment = () => {
         <h2 className="text-xl md:text-3xl font-bold text-gray-900 mt-8 text-center">
           FAQ
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            dolores, inventore ipsum dolorum quasi minima aliquam perferendis
-            nam eaque fuga sint neque delectus a tenetur possimus culpa libero
-            iste facere.
-          </p>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-            aperiam, corrupti deserunt in debitis odit fuga soluta. Modi
-            reprehenderit sequi atque rem molestias, quas, repellat eaque
-            recusandae, nam omnis unde!
-          </p>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-            illo debitis temporibus tempore quam ipsa corrupti nam ipsum
-            architecto vitae quas sapiente! Veritatis quam odit, assumenda quasi
-            inventore quibusdam facere.
-          </p>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa animi
-            aliquam voluptatem, necessitatibus ipsum neque ullam quos porro
-            eligendi laboriosam ut fuga quasi, sint nihil, mollitia rerum.
-            Maxime, rerum quis.
-          </p>
+        <div className="space-y-4">
+          {faqData.map((item, index) => (
+            <div key={index}>
+              <button
+                className="text-left w-full px-4 py-2 text-lg font-medium text-gray-900 bg-gray-200 rounded-lg focus:outline-none"
+                onClick={() => toggleQuestion(index)}
+              >
+                {item.question}
+              </button>
+              {openQuestionIndex === index && (
+                <div className="px-4 py-2 text-gray-600 bg-gray-100 rounded-b-lg">
+                  {item.answer}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>

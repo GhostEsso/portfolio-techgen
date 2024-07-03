@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
 type Testimonial = {
@@ -30,7 +31,7 @@ const testimonials: Testimonial[] = [
 
 const Customers: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto py-10 text-center bg-[#fae4dc]">
+    <div className="max-w-8xl mx-auto py-10 text-center bg-[#fae4dc]">
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-10 mx-10">
         Our customers can&apos;t imagine life without <strong>TechGen.</strong>
       </h1>

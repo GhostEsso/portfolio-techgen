@@ -18,6 +18,7 @@ export default function LampDemo() {
             duration: 0.8,
             ease: "easeInOut",
           }}
+          id="why-nexgen"
           className=" bg-gradient-to-br mt-72 md:text-center from-slate-300 to-white bg-clip-text text-center text-5xl font-bold tracking-tight text-transparent md:text-7xl m-[-100px]"
         >
           <strong>TechGen, <br /></strong><strong>new generation</strong> <br /> of{" "}
@@ -48,6 +49,8 @@ const Navbar = () => {
 
   const closeMenu = () => setMenuOpen(false);
 
+  const calendlyLink = "https://calendly.com/lilipitaham/book-call";
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-[#020C1E] text-white flex justify-between items-center px-6 py-4 pt-2 z-50 mb-5 pb-1">
       <TechGenLogo />
@@ -64,7 +67,9 @@ const Navbar = () => {
         <a href="#our-work" className="hover:underline">
           Our work
         </a>
-        <button className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600">
+        <button className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600"
+        onClick={() => window.open(calendlyLink, "_blank")}
+        >
           Book Call
         </button>
       </div>
@@ -121,7 +126,7 @@ const Navbar = () => {
           </a>
           <button
             className="bg-cyan-500 text-white py-2 px-4 rounded hover:bg-cyan-600 text-xl"
-            onClick={closeMenu}
+            onClick={() => window.open(calendlyLink, "_blank")}
           >
             Book Call
           </button>
