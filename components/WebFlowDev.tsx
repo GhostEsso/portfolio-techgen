@@ -30,7 +30,7 @@ const WebflowDevelopment = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8 px-4 sm:px-6 lg:px-5">
       <div className="max-w-3xl w-full space-y-6">
         <div className="bg-black text-white px-4 py-4 text-center rounded-3xl">
-          <h1 className="text-3xl font-extrabold mb-5">Webflow development</h1>
+          <h1 className="text-3xl font-extrabold mb-5 md:text-4xl lg:text-5xl">Webflow development</h1>
           <p className="text-lg mb-2">
             Experience accelerated website creation through Webflow development.
           </p>
@@ -47,7 +47,7 @@ const WebflowDevelopment = () => {
         <h2 className="text-xl md:text-3xl font-bold text-gray-900 mt-8 text-center">
           FAQ
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-8">
           {faqData.map((item, index) => (
             <div key={index}>
               <button
