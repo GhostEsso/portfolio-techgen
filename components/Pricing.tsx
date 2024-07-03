@@ -22,8 +22,7 @@ const plans: Plan[] = [
       "Revisions time: 24h",
       "1 task at time",
       "Front-end development (HTML/CSS/JavaScript)",
-      "Back-end development (Node.js, Ruby)",
-      "WordPress Development",
+      "Back-end development (Node.js)",
       "Webflow Development",
       "UX/UI design",
       "Dedicated project manager",
@@ -129,10 +128,10 @@ const Pricing: React.FC = () => {
       <p className="text-xl mb-10 md:text-2xl">
         One flat monthly fee. No contracts, no hidden fees
       </p>
-      <div className="flex justify-center space-x-1 mb-10 p-1 bg-slate-200 md:mx-40 rounded-3xl lg:mx-96">
+      <div className="flex justify-center space-x-1 mb-10 p-1 bg-slate-200 md:mx-40 md:py-3 rounded-3xl lg:mx-96">
         <button
           onClick={() => handleCycleChange("monthly")}
-          className={`px-4 py-2 rounded-3xl ${
+          className={`px-4 py-4 rounded-3xl ${
             billingCycle === "monthly"
               ? "bg-cyan-500 text-white"
               : "bg-gray-200"
@@ -142,7 +141,7 @@ const Pricing: React.FC = () => {
         </button>
         <button
           onClick={() => handleCycleChange("quarterly")}
-          className={`px-4 py-2 rounded-3xl ${
+          className={`px-4 py-4 rounded-3xl ${
             billingCycle === "quarterly"
               ? "bg-cyan-500 text-white"
               : "bg-gray-200"
@@ -152,7 +151,7 @@ const Pricing: React.FC = () => {
         </button>
         <button
           onClick={() => handleCycleChange("yearly")}
-          className={`px-4 py-2 rounded-3xl ${
+          className={`px-4 py-4 rounded-3xl ${
             billingCycle === "yearly" ? "bg-cyan-500 text-white" : "bg-gray-200"
           }`}
         >
